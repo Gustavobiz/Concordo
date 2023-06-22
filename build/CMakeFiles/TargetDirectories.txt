@@ -1,0 +1,3 @@
+/home/gustavobiz/aaa5 semestre/T3-Concordo/build/CMakeFiles/rebuild_cache.dir
+/home/gustavobiz/aaa5 semestre/T3-Concordo/build/CMakeFiles/edit_cache.dir
+/home/gustavobiz/aaa5 semestre/T3-Concordo/build/CMakeFiles/concordo.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/concordo.dir/src/main.cpp.o  -o concordo 
