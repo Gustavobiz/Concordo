@@ -6,9 +6,39 @@
 
 #IncludeRegexTransform: 
 
+../include/canal.h
+string
+-
+
+../include/servidor.h
+string
+-
+vector
+-
+canal.h
+../include/canal.h
+
+../include/sistema.h
+string
+-
+vector
+-
+usuario.h
+../include/usuario.h
+servidor.h
+../include/servidor.h
+
+../include/usuario.h
+string
+-
+
 /home/gustavobiz/aaa5 semestre/T3-Concordo/src/main.cpp
 iostream
 -
+sstream
+-
 string
 -
+sistema.h
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/sistema.h
 

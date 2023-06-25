@@ -123,6 +123,33 @@ concordo/fast:
 	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/build
 .PHONY : concordo/fast
 
+src/canal.o: src/canal.cpp.o
+
+.PHONY : src/canal.o
+
+# target to build an object file
+src/canal.cpp.o:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/canal.cpp.o
+.PHONY : src/canal.cpp.o
+
+src/canal.i: src/canal.cpp.i
+
+.PHONY : src/canal.i
+
+# target to preprocess a source file
+src/canal.cpp.i:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/canal.cpp.i
+.PHONY : src/canal.cpp.i
+
+src/canal.s: src/canal.cpp.s
+
+.PHONY : src/canal.s
+
+# target to generate assembly for a file
+src/canal.cpp.s:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/canal.cpp.s
+.PHONY : src/canal.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -150,6 +177,87 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/servidor.o: src/servidor.cpp.o
+
+.PHONY : src/servidor.o
+
+# target to build an object file
+src/servidor.cpp.o:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/servidor.cpp.o
+.PHONY : src/servidor.cpp.o
+
+src/servidor.i: src/servidor.cpp.i
+
+.PHONY : src/servidor.i
+
+# target to preprocess a source file
+src/servidor.cpp.i:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/servidor.cpp.i
+.PHONY : src/servidor.cpp.i
+
+src/servidor.s: src/servidor.cpp.s
+
+.PHONY : src/servidor.s
+
+# target to generate assembly for a file
+src/servidor.cpp.s:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/servidor.cpp.s
+.PHONY : src/servidor.cpp.s
+
+src/sistema.o: src/sistema.cpp.o
+
+.PHONY : src/sistema.o
+
+# target to build an object file
+src/sistema.cpp.o:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/sistema.cpp.o
+.PHONY : src/sistema.cpp.o
+
+src/sistema.i: src/sistema.cpp.i
+
+.PHONY : src/sistema.i
+
+# target to preprocess a source file
+src/sistema.cpp.i:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/sistema.cpp.i
+.PHONY : src/sistema.cpp.i
+
+src/sistema.s: src/sistema.cpp.s
+
+.PHONY : src/sistema.s
+
+# target to generate assembly for a file
+src/sistema.cpp.s:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/sistema.cpp.s
+.PHONY : src/sistema.cpp.s
+
+src/usuario.o: src/usuario.cpp.o
+
+.PHONY : src/usuario.o
+
+# target to build an object file
+src/usuario.cpp.o:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/usuario.cpp.o
+.PHONY : src/usuario.cpp.o
+
+src/usuario.i: src/usuario.cpp.i
+
+.PHONY : src/usuario.i
+
+# target to preprocess a source file
+src/usuario.cpp.i:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/usuario.cpp.i
+.PHONY : src/usuario.cpp.i
+
+src/usuario.s: src/usuario.cpp.s
+
+.PHONY : src/usuario.s
+
+# target to generate assembly for a file
+src/usuario.cpp.s:
+	$(MAKE) -f CMakeFiles/concordo.dir/build.make CMakeFiles/concordo.dir/src/usuario.cpp.s
+.PHONY : src/usuario.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +267,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... concordo"
+	@echo "... src/canal.o"
+	@echo "... src/canal.i"
+	@echo "... src/canal.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/servidor.o"
+	@echo "... src/servidor.i"
+	@echo "... src/servidor.s"
+	@echo "... src/sistema.o"
+	@echo "... src/sistema.i"
+	@echo "... src/sistema.s"
+	@echo "... src/usuario.o"
+	@echo "... src/usuario.i"
+	@echo "... src/usuario.s"
 .PHONY : help
 
 
