@@ -131,13 +131,13 @@ Você não pode alterar a descrição de um servidor que não foi criado por voc
 
 # A2.4 - Setar código :
 
-Usuario Julio muda código de um servidor dele, seguido de um servido que não exite, depois de um serividor que não é seu e por
-fim remove o codigo do seu servidor.
+Usuario Julio muda código de um servidor dele, seguido de um servido que não exite, depois de um serividor que não é seu, remove o codigo do seu servidor e por fim add novamente .
 
 set-server-invite-code minha-casa oiii
 set-server-invite-code nao-existe oiii
 set-server-invite-code minha-casa2 4567
 set-server-invite-code minha-casa 
+set-server-invite-code minha-casa oiii
 
 Saída:
 
@@ -145,6 +145,7 @@ Código de convite do servidor 'minha-casa' modificada!
 Servidor não foi encontrado
 Você não pode alterar a covite de um servidor que não foi criado por você
 Código de convite do servidor 'minha-casa'  removido!
+Código de convite do servidor 'minha-casa' modificada!
 
 # A2.5 - Listar servidores :
 O comando é usado e lista os existentes, depois são criados varios servidores com usuarios existentes e logo em seguida exibidos

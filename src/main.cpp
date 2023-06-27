@@ -53,6 +53,9 @@ int main() {
         }else if(op==9){
              iss >> nome;
              cout << concordo.removerServer(nome)<<endl;
+        }else if(op==10){
+             iss >> nome>>generico;
+             cout << concordo.entrarServer(nome,generico)<<endl;
         }
         
         else if(op==40){

@@ -21,4 +21,5 @@ class Sistema{
     string definindoConvite(std::string& nomeServer, std::string& convite);
     void listarServer();
     string removerServer(std::string& nomeServer);
+    string entrarServer(std::string& nomeServer, std::string& convite);
 };

@@ -111,17 +111,18 @@ string Sistema::descricao(std::string& nomeServer, std::string& Descricao){
         return resultado;            
 }
 string Sistema::definindoConvite(std::string& nomeServer, std::string& convite){
+    int x=0;
         for ( Servidor server : todosSer) {
             if (server.getNomeSer() == nomeServer) {
                 if(server.getIdDono()==Idlogado){
                     if(convite.size() == 0){
-                        convite="";
-                        server.setConvite(convite);                        
+                        convite="";                       
+                        todosSer[x].setConvite(convite);                        
                         string resultado="Código de convite do servidor '"+nomeServer+"'  removido!";
                     return resultado;
                     }else{
                         convite = convite.substr(convite.find_first_not_of(" ")); 
-                        server.setConvite(convite);                        
+                        todosSer[x].setConvite(convite);                        
                         string resultado="Código de convite do servidor '"+nomeServer+"' modificada!";
                     return resultado;
                     }
@@ -130,6 +131,7 @@ string Sistema::definindoConvite(std::string& nomeServer, std::string& convite){
                     return "Você não pode alterar a covite de um servidor que não foi criado por você";
                 }                
             }
+            x++;
         }
         return "Servidor não foi encontrado";
 
@@ -158,4 +160,28 @@ string Sistema::removerServer(std::string& nomeServer){
         string resultado="Servidor '"+nomeServer+"' não encontrado";
         return resultado;
 
+}
+
+string Sistema::entrarServer(std::string& nomeServer, std::string& convite){
+        for ( Servidor server : todosSer) {
+            if (server.getNomeSer() == nomeServer) { 
+                if(server.getCodigoConvite().size() == 0){
+                    //cout << server.getCodigoConvite()<<endl;
+                    server.addId(Idlogado);
+                    return "Entrou no servidor com sucesso";
+
+                }if(server.getCodigoConvite()== convite){
+                    server.addId(Idlogado);
+                    return "Entrou no servidor com sucesso";
+
+                }else if(convite.size() == 0){
+                    return "Servidor requer código de convite";
+                }else{
+                    return "Código convite errado!";
+                }
+
+            }                 
+       }
+        string resultado="Servidor '"+nomeServer+"' não encontrado";
+        return resultado;
 }

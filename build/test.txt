@@ -1,0 +1,10 @@
+create-user maria@hotmail.com segredo456 Maria Souza
+create-user pedro@yahoo.com.br 12345678 Pedro Santos
+create-user julio.melo@imd.ufrn.br 12ab34cd Julio Melo
+login julio.melo@imd.ufrn.br 12ab34cd
+create-server minha-casa
+set-server-invite-code minha-casa oiii
+disconnect
+login pedro@yahoo.com.br 12345678
+enter-server minha-casa 
+enter-server minha-casa oiii

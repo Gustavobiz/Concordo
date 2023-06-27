@@ -16,3 +16,9 @@ void Servidor::setDescricao(string& Descricao) {
 void Servidor::setConvite(string& convite){
 codigoConvite=convite;
 }
+string Servidor::getCodigoConvite(){
+  return codigoConvite;
+}
+void Servidor::addId(int& id) {
+  idPart.push_back(id);
+}

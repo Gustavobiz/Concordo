@@ -34,11 +34,7 @@ iostream
 string
 -
 
-/home/gustavobiz/aaa5 semestre/T3-Concordo/src/main.cpp
-iostream
--
-sstream
--
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/sistema.cpp
 string
 -
 sistema.h
