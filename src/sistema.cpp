@@ -18,7 +18,7 @@ int Sistema::comandos(string& comando){
             return 5;
         }else if (comando.find("set-server-desc") == 0 && Idlogado>0) {
             return 6;
-        }else if (comando.find("set-server-invitecode") == 0 && Idlogado>0) {
+        }else if (comando.find("set-server-invite-code") == 0 && Idlogado>0) {
             return 7;
         }else if (comando.find("list-servers") == 0 && Idlogado>0) {
             return 8;
@@ -107,6 +107,28 @@ string Sistema::descricao(std::string& nomeServer, std::string& Descricao){
         }
         string resultado="Servidor '"+nomeServer+"' não existe";
         return resultado;            
+}
+string Sistema::definindoConvite(std::string& nomeServer, std::string& convite){
+        for ( Servidor server : todosSer) {
+            if (server.getNomeSer() == nomeServer) {
+                if(server.getIdDono()==Idlogado){
+                    if(convite.size() == 0){
+                        convite="";
+                        server.setConvite(convite);                        
+                        string resultado="Código de convite do servidor '"+nomeServer+"'  removido!";
+                    return resultado;
+                    }else{
+                        convite = convite.substr(convite.find_first_not_of(" ")); 
+                        server.setConvite(convite);                        
+                        string resultado="Código de convite do servidor '"+nomeServer+"' modificada!";
+                    return resultado;
+                    }
 
+                }else{
+                    return "Você não pode alterar a covite de um servidor que não foi criado por você";
+                }                
+            }
+        }
+        return "Servidor não foi encontrado";
 
 }

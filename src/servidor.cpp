@@ -13,3 +13,6 @@ int Servidor::getIdDono() {
 void Servidor::setDescricao(string& Descricao) {
   descricao=Descricao;
 }
+void Servidor::setConvite(string& convite){
+codigoConvite=convite;
+}

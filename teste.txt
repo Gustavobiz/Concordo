@@ -1,2 +1,0 @@
-create-user julio.melo@imd.ufrn.br 12ab34cd Julio Melo
-login julio.melo@imd.ufrn.br 12ab34cd

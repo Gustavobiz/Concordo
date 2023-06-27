@@ -16,4 +16,5 @@ class Servidor{
     int getIdDono();
     string getDescricao();
     void setDescricao(string& Descricao);
+    void setConvite(string& convite);
 };

@@ -45,6 +45,9 @@ int main() {
             iss >> nome;
             getline(iss, generico);
              cout<<concordo.descricao(nome,generico)<<endl;
+        }else if(op==7){
+            iss >> nome >>generico;
+             cout<<concordo.definindoConvite(nome,generico)<<endl;
         }
         
         else if(op==40){

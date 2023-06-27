@@ -18,4 +18,5 @@ class Sistema{
     string desconectar();
     string criarServer( std::string& nomeServer);
     string descricao( std::string& nomeServer, std::string& Descricao);
+    string definindoConvite(std::string& nomeServer, std::string& convite);
 };
