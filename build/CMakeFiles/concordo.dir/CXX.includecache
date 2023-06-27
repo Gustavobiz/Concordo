@@ -27,6 +27,8 @@ usuario.h
 ../include/usuario.h
 servidor.h
 ../include/servidor.h
+iostream
+-
 
 ../include/usuario.h
 string
@@ -37,6 +39,12 @@ iostream
 -
 sstream
 -
+string
+-
+sistema.h
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/sistema.h
+
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/sistema.cpp
 string
 -
 sistema.h

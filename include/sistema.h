@@ -2,6 +2,7 @@
 #include <vector>
 #include "usuario.h"
 #include "servidor.h"
+#include <iostream>
 using namespace std;
 class Sistema{
     private:
@@ -15,4 +16,6 @@ class Sistema{
     string criarUsuario(std::string& nome, std::string& email,  std::string& senha,int& id);
     string login(std::string& email, std::string& senha);
     string desconectar();
+    string criarServer( std::string& nomeServer);
+    string descricao( std::string& nomeServer, std::string& Descricao);
 };

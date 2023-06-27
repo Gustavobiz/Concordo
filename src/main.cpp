@@ -10,7 +10,7 @@ int main() {
     // Lendo cada linha da entrada padrão (conteúdo do arquivo exemplo.txt)
     while (getline(cin, linha)&& quit==0 ) {
     string comando;
-    string nome,email,senha;
+    string nome,email,senha,generico;
 
     // Criar um stringstream para facilitar a extração dos valores
     istringstream iss(linha);
@@ -30,7 +30,7 @@ int main() {
              getline(iss, nome);
              nome = nome.substr(nome.find_first_not_of(" "));  
              cout<<concordo.criarUsuario( nome, email,senha, id )<<endl;
-             cout <<id;
+             
         }else if(op==3){
              iss >> email >>senha;
              cout<<concordo.login(email,senha)<<endl;
@@ -38,6 +38,13 @@ int main() {
         }else if(op==4){
              cout<<concordo.desconectar()<<endl;
 
+        }else if(op==5){
+            iss >> nome;
+             cout<<concordo.criarServer(nome)<<endl;
+        }else if(op==6){
+            iss >> nome;
+            getline(iss, generico);
+             cout<<concordo.descricao(nome,generico)<<endl;
         }
         
         else if(op==40){

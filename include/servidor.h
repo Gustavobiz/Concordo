@@ -8,7 +8,12 @@ class Servidor{
     string nome;
     string descricao;
     string codigoConvite;
-    std::vector<Canal*> canais;
+    std::vector<Canal> canais;
     std::vector<int> idPart;
     public:
+    Servidor( std::string& nomeServer, int& IdDono);
+    string getNomeSer();
+    int getIdDono();
+    string getDescricao();
+    void setDescricao(string& Descricao);
 };
