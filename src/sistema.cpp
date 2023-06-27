@@ -55,15 +55,17 @@ string Sistema::criarUsuario( std::string& nome,  std::string& email,  std::stri
 string Sistema::login(std::string& email, std::string& senha){
         string str1 = "Logado como ";
         string resultado = str1+email;
-        
-        for ( Usuario usuario : todosUsu) {
+        if(Idlogado>0){
+            return "Voce já está logado em uma conta!";
+        }else{
+          for ( Usuario usuario : todosUsu) {
             if (usuario.getEmail() == email && usuario.getSenha() == senha) {
                 Idlogado=usuario.getId();
                 
                 
                 return resultado;
             }
-        }
+        }}
         return "Senha ou usuário inválidos!";
 }
 
@@ -130,5 +132,30 @@ string Sistema::definindoConvite(std::string& nomeServer, std::string& convite){
             }
         }
         return "Servidor não foi encontrado";
+
+}
+void Sistema::listarServer(){
+        for ( Servidor server : todosSer) {
+            cout << server.getNomeSer() <<endl;
+        }
+
+}
+
+string Sistema::removerServer(std::string& nomeServer){
+    int x=0;
+        for ( Servidor server : todosSer) {
+            if (server.getNomeSer() == nomeServer) {
+                if(server.getIdDono()==Idlogado){
+                    todosSer.erase(todosSer.begin() +x);
+                    string resultado="Servidor '"+nomeServer+"' removido!";
+                    return resultado;                    
+                }
+                string resultado="Você não é o dono do servidor '"+nomeServer+"'";
+                return resultado;
+            }
+            x++;
+        }
+        string resultado="Servidor '"+nomeServer+"' não encontrado";
+        return resultado;
 
 }

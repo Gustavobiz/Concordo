@@ -70,11 +70,13 @@ Tentando logar com email falso e logo em seguida logando com um verdadeiro.
 
 login falso@falso.br 12ab34cd
 login julio.melo@imd.ufrn.br 12ab34cd
+login pedro@yahoo.com.br 12345678 Pedro Santos
 
 Saída:
 
 Senha ou usuário inválidos!
 Logado como julio.melo@imd.ufrn.br
+Voce já está logado em uma conta!
 
 # A2.1 - Desconectar :
 Desconectantando, e depois tentando desconectar sem estar logado.
@@ -143,3 +145,66 @@ Código de convite do servidor 'minha-casa' modificada!
 Servidor não foi encontrado
 Você não pode alterar a covite de um servidor que não foi criado por você
 Código de convite do servidor 'minha-casa'  removido!
+
+# A2.5 - Listar servidores :
+O comando é usado e lista os existentes, depois são criados varios servidores com usuarios existentes e logo em seguida exibidos
+
+list-servers
+disconnect
+login joao@gmail.com senha123
+create-server juliaofest
+disconnect
+login pedro@yahoo.com.br 12345678
+create-server pedrofest
+disconnect
+login ana@outlook.com.br minhaSenha
+create-server anafest
+disconnect
+login carlos@uol.com.br 9876Carlos
+create-server cacafest
+list-servers 
+
+Saída:
+
+minha-casa
+minha-casa2
+Desconectando usuário julio.melo@imd.ufrn.br
+Logado como joao@gmail.com
+Servidor criado
+Desconectando usuário joao@gmail.com
+Logado como pedro@yahoo.com.br
+Servidor criado
+Desconectando usuário pedro@yahoo.com.br
+Logado como ana@outlook.com.br
+Servidor criado
+Desconectando usuário ana@outlook.com.br
+Logado como carlos@uol.com.br
+Servidor criado
+minha-casa
+minha-casa2
+juliaofest
+pedrofest
+anafest
+cacafest
+
+# A2.5 - Remover servidores :
+O usuario logado remove um servidor que ele é dono, tenta apagar um servidor que não é dele e depois tenta apagar um servidor que não existe, ao final a lista é exibida e o servidor
+apagado não está mais lá. 
+
+remove-server cacafest
+remove-server minha-casa2
+remove-server balacobaco
+list-servers
+
+Saída:
+
+Servidor 'cacafest' removido!
+Você não é o dono do servidor 'minha-casa2'
+Servidor 'balacobaco' não encontrado
+minha-casa
+minha-casa2
+juliaofest
+pedrofest
+anafest
+
+# A2.7  - Entrar em um servidor :

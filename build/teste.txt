@@ -7,6 +7,7 @@ create-user ana@outlook.com.br minhaSenha Ana Oliveira
 create-user carlos@uol.com.br 9876Carlos Carlos Ferreira
 login falso@falso.br 12ab34cd
 login julio.melo@imd.ufrn.br 12ab34cd
+login pedro@yahoo.com.br 12345678 Pedro Santos
 create-server minha-casa
 disconnect
 disconnect
@@ -22,5 +23,25 @@ set-server-desc minha-casa2 “Este servidor serve como minha casa, sempre estar
 set-server-invite-code minha-casa oiii
 set-server-invite-code nao-existe oiii
 set-server-invite-code minha-casa2 4567
-set-server-invite-code minha-casa 
+set-server-invite-code minha-casa
+list-servers
+disconnect
+login joao@gmail.com senha123
+create-server juliaofest
+disconnect
+login pedro@yahoo.com.br 12345678
+create-server pedrofest
+disconnect
+login ana@outlook.com.br minhaSenha
+create-server anafest
+disconnect
+login carlos@uol.com.br 9876Carlos
+create-server cacafest
+list-servers
+remove-server cacafest
+remove-server minha-casa2
+remove-server balacobaco
+list-servers
 quit
+
+

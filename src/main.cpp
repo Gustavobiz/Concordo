@@ -48,6 +48,11 @@ int main() {
         }else if(op==7){
             iss >> nome >>generico;
              cout<<concordo.definindoConvite(nome,generico)<<endl;
+        }else if(op==8){
+             concordo.listarServer();
+        }else if(op==9){
+             iss >> nome;
+             cout << concordo.removerServer(nome)<<endl;
         }
         
         else if(op==40){
