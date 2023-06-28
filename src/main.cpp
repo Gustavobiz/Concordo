@@ -58,9 +58,9 @@ int main() {
              cout << concordo.entrarServer(nome,generico)<<endl;
         }else if(op==11){
              cout << concordo.sairServer()<<endl;
-        }
-        
-        else if(op==40){
+        }else if(op==12){
+             concordo.listarPessoasServer();
+        }else if(op==40){
             std::cout<<"Código inesistente ou você não tem permissão para realizar comando"<<endl;
 
         }

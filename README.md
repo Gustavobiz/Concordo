@@ -223,4 +223,16 @@ Entrou no servidor com sucesso
 Servidor 'falso' não encontrado
 Entrou no servidor com sucesso
 
-# A2.8 - Sair de um servidor:
+# A2.8 - Sair de um servidor :
+O usuario sair do servidor que ele estava online, depois faz o mesmo só que dá erro pois não está online em nenhum.
+
+leave-server
+leave-server
+
+Saída:
+
+Saindo do servidor 'anafest'
+Você não está visualizando nenhum servidor
+
+# A2.9 - Listar pessoas no servidor :
+ não consegui fazer funcionar

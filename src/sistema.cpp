@@ -199,3 +199,37 @@ string Sistema::sairServer(){
     }
 
 }
+void Sistema::listarPessoasServer() {
+    for (Servidor& servidor : todosSer) {
+        if (servidor.getNomeSer() == serAtual) {
+            for (int idUsuario : servidor.getIdPart()) {
+                for (Usuario& usuario : todosUsu) {
+                    if (usuario.getId() == idUsuario) {
+                        std::cout << usuario.getNome() << std::endl;
+                    }
+                }
+            }
+            return;
+        }
+    }
+}
+Sistema::~Sistema(){}
+
+/*void Sistema::listarPessoasServer() {
+    std::cout << serAtual << std::endl;
+    for ( Servidor& servidor : todosSer) {
+        if (servidor.getNomeSer() == serAtual) {
+             std::cout << servidor.getNomeSer()<< std::endl;
+            for (int idUsuario : servidor.getIdPart()) {
+                std::cout << idUsuario<< std::endl;
+                for (const Usuario& usuario : todosUsu) {
+                    if (usuario.getId() == idUsuario) {
+                        std::cout << usuario.getNome() << std::endl;
+                    }
+                }
+            }
+            return;
+        }
+    }
+}*/
+
