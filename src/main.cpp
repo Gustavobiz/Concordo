@@ -56,6 +56,8 @@ int main() {
         }else if(op==10){
              iss >> nome>>generico;
              cout << concordo.entrarServer(nome,generico)<<endl;
+        }else if(op==11){
+             cout << concordo.sairServer()<<endl;
         }
         
         else if(op==40){

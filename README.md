@@ -209,3 +209,18 @@ pedrofest
 anafest
 
 # A2.7  - Entrar em um servidor :
+O usuario logado tenta entrar em um servidor sem o codigo e fracassa, colocou o código corretamente e consegue, tenta entrar em um que não existe, e por fim entra em um server que não tem código.
+
+enter-server minha-casa
+enter-server minha-casa oiii
+enter-server falso
+enter-server anafest
+
+Saída:
+
+Servidor requer código de convite
+Entrou no servidor com sucesso
+Servidor 'falso' não encontrado
+Entrou no servidor com sucesso
+
+# A2.8 - Sair de um servidor:

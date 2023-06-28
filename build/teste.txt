@@ -44,8 +44,8 @@ remove-server cacafest
 remove-server minha-casa2
 remove-server balacobaco
 list-servers
-enter-server joaofest 
-enter-server joaofest oiii
+enter-server minha-casa
+enter-server minha-casa oiii
 enter-server falso
 enter-server anafest
 quit

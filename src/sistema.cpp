@@ -168,11 +168,14 @@ string Sistema::entrarServer(std::string& nomeServer, std::string& convite){
                 if(server.getCodigoConvite().size() == 0){
                     //cout << server.getCodigoConvite()<<endl;
                     server.addId(Idlogado);
+                    serAtual=server.getNomeSer();
                     return "Entrou no servidor com sucesso";
 
                 }if(server.getCodigoConvite()== convite){
                     server.addId(Idlogado);
+                    serAtual=server.getNomeSer();
                     return "Entrou no servidor com sucesso";
+
 
                 }else if(convite.size() == 0){
                     return "Servidor requer código de convite";
@@ -184,4 +187,15 @@ string Sistema::entrarServer(std::string& nomeServer, std::string& convite){
        }
         string resultado="Servidor '"+nomeServer+"' não encontrado";
         return resultado;
+}
+string Sistema::sairServer(){
+    if(serAtual=="nenhum"){
+        return "Você não está visualizando nenhum servidor";
+    }else{
+        string resultado="Saindo do servidor '"+serAtual+"'";  
+        serAtual="nenhum";
+        return resultado;  
+
+    }
+
 }

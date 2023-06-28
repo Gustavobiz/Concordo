@@ -9,6 +9,7 @@ class Sistema{
     std::vector<Usuario> todosUsu;
     std::vector<Servidor> todosSer;
     int Idlogado;
+    string serAtual="nenhum";
 
     public:
     Sistema();
@@ -22,4 +23,5 @@ class Sistema{
     void listarServer();
     string removerServer(std::string& nomeServer);
     string entrarServer(std::string& nomeServer, std::string& convite);
+    string sairServer();
 };

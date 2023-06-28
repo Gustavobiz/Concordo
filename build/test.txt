@@ -8,3 +8,5 @@ disconnect
 login pedro@yahoo.com.br 12345678
 enter-server minha-casa 
 enter-server minha-casa oiii
+leave-server
+leave-server
