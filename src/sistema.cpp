@@ -163,13 +163,13 @@ string Sistema::removerServer(std::string& nomeServer){
 }
 
 string Sistema::entrarServer(std::string& nomeServer, std::string& convite){
-        for ( Servidor server : todosSer) {
+        for ( Servidor& server : todosSer) {
             if (server.getNomeSer() == nomeServer) { 
                 if(server.getCodigoConvite().size() == 0){
-                    //cout << server.getCodigoConvite()<<endl;
                     server.addId(Idlogado);
                     serAtual=server.getNomeSer();
                     return "Entrou no servidor com sucesso";
+                    
 
                 }if(server.getCodigoConvite()== convite){
                     server.addId(Idlogado);
@@ -199,25 +199,24 @@ string Sistema::sairServer(){
     }
 
 }
-// void Sistema::listarPessoasServer() {
-//     cout <<"________"<<serAtual<< endl;
-//     if("nenhum"== serAtual){
-//            cout <<"Você parece não estar online"<< endl;
-//            return;
-//     }
-//     for (Servidor& servidor : todosSer) {
-//         if (servidor.getNomeSer() == serAtual) {
-//             for (int idUsuario : servidor.getIdPart()) {
-//                 for (Usuario& usuario : todosUsu) {
-//                     if (usuario.getId() == idUsuario) {
-//                         std::cout << usuario.getNome() << std::endl;
-//                     }
-//                 }
-//             }
-//             return;
-//         }
-//     }   
-// }
+void Sistema::listarPessoasServer() {
+    if("nenhum"== serAtual){
+           cout <<"Você parece não estar online"<< endl;
+           return;
+    }
+    for (Servidor& servidor : todosSer) {
+        if (servidor.getNomeSer() == serAtual) {
+            for (int idUsuario : servidor.getIdPart()) {
+                for (Usuario& usuario : todosUsu) {
+                    if (usuario.getId() == idUsuario) {
+                        std::cout << usuario.getNome() << std::endl;
+                    }
+                }
+            }
+            return;
+        }
+    }   
+}
 Sistema::~Sistema(){}
 // Servidor getServer(string& nomeServer){
 //     // for ( Servidor server : todosSer) {
@@ -229,29 +228,32 @@ Sistema::~Sistema(){}
 // }
 
 
-void Sistema::listarPessoasServer() {
-    cout <<"________"<<serAtual<< endl;
-    if(serAtual == "nenhum"){
-           cout <<"Você parece não estar online"<< endl;
-           return;
-    }
-    for (Servidor& servidor : todosSer) {
-        if (servidor.getNomeSer() == serAtual) {
-             cout <<"____oi____"<< endl;
-            //  vector<int> vecID = servidor.getIdPart();
-            for (int idUsuario: servidor.getIdPart()) {
-                cout <<idUsuario<< endl;
-                for (Usuario& usuario : todosUsu) {
-                    if (usuario.getId() == idUsuario) {
-                        cout <<"________"<< endl;
-                        cout << usuario.getNome() << endl;
-                    }
-                }
-            }
-            return;
-        }
-    }   
-}
+// void Sistema::listarPessoasServer() {
+//    if (serAtual == "nenhum") {
+//         cout << "Você não está conectado a um servidor." << endl;
+//         return;
+//     }
+
+//     // Obtém o vetor de IDs dos usuários no servidor atual
+//     vector<int> usuariosNoServidor;
+//     for (Servidor& servidor : todosSer) {
+//         if (servidor.getNomeSer() == serAtual) {
+//             usuariosNoServidor = servidor.getUsuariosNoServidor();
+//             break;
+//         }
+//     }
+
+//     // Exibe os nomes dos usuários
+//     cout << "Usuários no servidor '" << serAtual << "':" << endl;
+//     for (int idUsuario : usuariosNoServidor) {
+//         for (Usuario& usuario : todosUsu) {
+//             if (usuario.getId() == idUsuario) {
+//                 cout << usuario.getNome() << endl;
+//                 break;
+//             }
+//         }
+//     } 
+// }
 
 
 

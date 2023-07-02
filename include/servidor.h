@@ -1,3 +1,5 @@
+#ifndef servidor_h
+#define servidor_h
 #include <string>
 #include <vector>
 #include "canal.h"
@@ -12,6 +14,7 @@ class Servidor{
     std::vector<Canal> canais;
     std::vector<int> idPart;
     public:
+   
 /**
  * @brief Construtor da classe Servidor.
  *
@@ -61,7 +64,7 @@ class Servidor{
  *
  * @param id O ID do participante a ser adicionado.
  */   
-    void addId(int& id);
+    void addId(int id);
  
 /**
  * @brief Obtém os IDs dos participantes do servidor.
@@ -70,3 +73,5 @@ class Servidor{
  */   
     vector<int>&  getIdPart();
 };
+
+#endif 

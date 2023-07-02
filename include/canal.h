@@ -1,3 +1,5 @@
+#ifndef canal_h
+#define canal_h
 #include <string>
 using namespace std;
 class Canal{
@@ -5,3 +7,7 @@ class Canal{
     string nome;
     public:
 };
+
+
+
+#endif 

@@ -1,3 +1,5 @@
+#ifndef usuario_h
+#define usuario_h
 #include <string>
 using namespace std;
 class Usuario {
@@ -40,3 +42,5 @@ class Usuario {
     string getNome();
     int getId();
 };
+
+#endif 

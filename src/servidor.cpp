@@ -19,9 +19,10 @@ codigoConvite=convite;
 string Servidor::getCodigoConvite(){
   return codigoConvite;
 }
-void Servidor::addId(int& id) {
+void Servidor::addId(int id) {
   idPart.push_back(id);
 }
+
 vector<int>&  Servidor::getIdPart() {  
     return idPart;
 }

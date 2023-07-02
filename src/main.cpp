@@ -61,7 +61,7 @@ int main() {
         }else if(op==12){
              concordo.listarPessoasServer();
         }else if(op==40){
-            std::cout<<"Código inesistente ou você não tem permissão para realizar comando"<<endl;
+            std::cout<<"Código inexistente ou você não tem permissão para realizar comando"<<endl;
 
         }
 

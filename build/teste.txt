@@ -27,15 +27,17 @@ set-server-invite-code minha-casa
 set-server-invite-code minha-casa oiii
 list-servers
 disconnect
+login ana@outlook.com.br minhaSenha
+create-server anafest
+disconnect
 login joao@gmail.com senha123
 create-server joaofest
+enter-server anafest
 set-server-invite-code joaofest oiii
 disconnect
 login pedro@yahoo.com.br 12345678
 create-server pedrofest
-disconnect
-login ana@outlook.com.br minhaSenha
-create-server anafest
+enter-server anafest
 disconnect
 login carlos@uol.com.br 9876Carlos
 create-server cacafest
@@ -47,12 +49,11 @@ list-servers
 enter-server minha-casa
 enter-server minha-casa oiii
 enter-server falso
+enter-server anafest
 list-participants
-enter-server anafest
 leave-server
 leave-server
 enter-server anafest
-list-servers
 list-participants
 quit
 

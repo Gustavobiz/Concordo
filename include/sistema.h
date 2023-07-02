@@ -1,3 +1,5 @@
+#ifndef sistema_h
+#define sistema_h
 #include <string>
 #include <vector>
 #include "usuario.h"
@@ -106,3 +108,4 @@ class Sistema{
 
     Servidor getServer(Servidor& Server);
 };
+#endif 

@@ -36,6 +36,20 @@ iostream
 string
 -
 
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/canal.cpp
+canal.h
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/canal.h
+
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/main.cpp
+iostream
+-
+sstream
+-
+string
+-
+sistema.h
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/sistema.h
+
 /home/gustavobiz/aaa5 semestre/T3-Concordo/src/servidor.cpp
 servidor.h
 /home/gustavobiz/aaa5 semestre/T3-Concordo/src/servidor.h
@@ -45,4 +59,8 @@ string
 -
 sistema.h
 /home/gustavobiz/aaa5 semestre/T3-Concordo/src/sistema.h
+
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/usuario.cpp
+usuario.h
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/usuario.h
 
