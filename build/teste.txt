@@ -47,10 +47,12 @@ list-servers
 enter-server minha-casa
 enter-server minha-casa oiii
 enter-server falso
+list-participants
 enter-server anafest
 leave-server
 leave-server
 enter-server anafest
+list-servers
 list-participants
 quit
 

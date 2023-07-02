@@ -68,5 +68,5 @@ class Servidor{
  *
  * @return Um vetor contendo os IDs dos participantes do servidor.
  */   
-    vector<int> getIdPart();
+    vector<int>&  getIdPart();
 };

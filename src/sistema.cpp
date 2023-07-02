@@ -199,37 +199,59 @@ string Sistema::sairServer(){
     }
 
 }
+// void Sistema::listarPessoasServer() {
+//     cout <<"________"<<serAtual<< endl;
+//     if("nenhum"== serAtual){
+//            cout <<"Você parece não estar online"<< endl;
+//            return;
+//     }
+//     for (Servidor& servidor : todosSer) {
+//         if (servidor.getNomeSer() == serAtual) {
+//             for (int idUsuario : servidor.getIdPart()) {
+//                 for (Usuario& usuario : todosUsu) {
+//                     if (usuario.getId() == idUsuario) {
+//                         std::cout << usuario.getNome() << std::endl;
+//                     }
+//                 }
+//             }
+//             return;
+//         }
+//     }   
+// }
+Sistema::~Sistema(){}
+// Servidor getServer(string& nomeServer){
+//     // for ( Servidor server : todosSer) {
+//     //     if (server.getNomeSer() == nomeServer) { 
+//     //         return server;
+//     //     }
+//     // }
+//     return;
+// }
+
+
 void Sistema::listarPessoasServer() {
+    cout <<"________"<<serAtual<< endl;
+    if(serAtual == "nenhum"){
+           cout <<"Você parece não estar online"<< endl;
+           return;
+    }
     for (Servidor& servidor : todosSer) {
         if (servidor.getNomeSer() == serAtual) {
-            for (int idUsuario : servidor.getIdPart()) {
+             cout <<"____oi____"<< endl;
+            //  vector<int> vecID = servidor.getIdPart();
+            for (int idUsuario: servidor.getIdPart()) {
+                cout <<idUsuario<< endl;
                 for (Usuario& usuario : todosUsu) {
                     if (usuario.getId() == idUsuario) {
-                        std::cout << usuario.getNome() << std::endl;
+                        cout <<"________"<< endl;
+                        cout << usuario.getNome() << endl;
                     }
                 }
             }
             return;
         }
-    }
+    }   
 }
-Sistema::~Sistema(){}
 
-/*void Sistema::listarPessoasServer() {
-    std::cout << serAtual << std::endl;
-    for ( Servidor& servidor : todosSer) {
-        if (servidor.getNomeSer() == serAtual) {
-             std::cout << servidor.getNomeSer()<< std::endl;
-            for (int idUsuario : servidor.getIdPart()) {
-                std::cout << idUsuario<< std::endl;
-                for (const Usuario& usuario : todosUsu) {
-                    if (usuario.getId() == idUsuario) {
-                        std::cout << usuario.getNome() << std::endl;
-                    }
-                }
-            }
-            return;
-        }
-    }
-}*/
+
 

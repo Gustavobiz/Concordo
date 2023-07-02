@@ -103,4 +103,6 @@ class Sistema{
  * @brief Lista as pessoas presentes no servidor atual.
  */   
     void listarPessoasServer();
+
+    Servidor getServer(Servidor& Server);
 };
