@@ -4,6 +4,8 @@
 #include <vector>
 #include "usuario.h"
 #include "servidor.h"
+#include "canalTexto.h"
+#include "canalVoz.h"
 #include <iostream>
 using namespace std;
 class Sistema{
@@ -106,6 +108,8 @@ class Sistema{
  */   
     void listarPessoasServer();
 
-    Servidor getServer(Servidor& Server);
+    void listarCanais();
+
+    string criarCanal(std::string& nomeCanal, std::string& tipo);
 };
 #endif 

@@ -3,19 +3,42 @@
 
 CMakeFiles/concordo.dir/src/canal.cpp.o
  ../include/canal.h
+ ../include/mensagem.h
  /home/gustavobiz/aaa5 semestre/T3-Concordo/src/canal.cpp
+CMakeFiles/concordo.dir/src/canalTexto.cpp.o
+ ../include/canal.h
+ ../include/canalTexto.h
+ ../include/mensagem.h
+ /home/gustavobiz/aaa5 semestre/T3-Concordo/src/canalTexto.cpp
+CMakeFiles/concordo.dir/src/canalVoz.cpp.o
+ ../include/canal.h
+ ../include/canalVoz.h
+ ../include/mensagem.h
+ /home/gustavobiz/aaa5 semestre/T3-Concordo/src/canalVoz.cpp
 CMakeFiles/concordo.dir/src/main.cpp.o
  ../include/canal.h
+ ../include/canalTexto.h
+ ../include/canalVoz.h
+ ../include/mensagem.h
  ../include/servidor.h
  ../include/sistema.h
  ../include/usuario.h
  /home/gustavobiz/aaa5 semestre/T3-Concordo/src/main.cpp
+CMakeFiles/concordo.dir/src/mensagem.cpp.o
+ ../include/mensagem.h
+ /home/gustavobiz/aaa5 semestre/T3-Concordo/src/mensagem.cpp
 CMakeFiles/concordo.dir/src/servidor.cpp.o
  ../include/canal.h
+ ../include/canalTexto.h
+ ../include/canalVoz.h
+ ../include/mensagem.h
  ../include/servidor.h
  /home/gustavobiz/aaa5 semestre/T3-Concordo/src/servidor.cpp
 CMakeFiles/concordo.dir/src/sistema.cpp.o
  ../include/canal.h
+ ../include/canalTexto.h
+ ../include/canalVoz.h
+ ../include/mensagem.h
  ../include/servidor.h
  ../include/sistema.h
  ../include/usuario.h

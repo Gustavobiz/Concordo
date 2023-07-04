@@ -1,7 +1,7 @@
 #ifndef mensagem_h
 #define mensagem_h
 #include <string>
-
+using namespace std;
 class Mensagem{
      private:
      string dataHora;
@@ -9,6 +9,6 @@ class Mensagem{
      string conteudo;
      public:
 
-}
+};
 
 #endif 

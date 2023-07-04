@@ -4,6 +4,8 @@
 #include <vector>
 #include "canal.h"
 #include <iostream>
+#include "canalVoz.h"
+#include "canalTexto.h"
 using namespace std;
 class Servidor{
     private:
@@ -11,7 +13,7 @@ class Servidor{
     string nome;
     string descricao;
     string codigoConvite;
-    std::vector<Canal> canais;
+    std::vector<Canal*> canais;
     std::vector<int> idPart;
     public:
    
@@ -72,6 +74,8 @@ class Servidor{
  * @return Um vetor contendo os IDs dos participantes do servidor.
  */   
     vector<int>&  getIdPart();
+    vector<Canal*> getCanais();
+    string addCanais(string nomeCanal, string tipo);
 };
 
 #endif 

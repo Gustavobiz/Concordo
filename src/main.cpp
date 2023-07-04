@@ -60,7 +60,15 @@ int main() {
              cout << concordo.sairServer()<<endl;
         }else if(op==12){
              concordo.listarPessoasServer();
-        }else if(op==40){
+        
+        }else if(op==13){
+             concordo.listarCanais();
+        }else if(op==14){
+             iss >> nome >>generico;
+             cout << concordo.criarCanal(nome,generico)<<endl;
+        }
+        
+        else if(op==40){
             std::cout<<"Código inexistente ou você não tem permissão para realizar comando"<<endl;
 
         }

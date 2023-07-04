@@ -5,7 +5,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/gustavobiz/aaa5 semestre/T3-Concordo/src/canal.cpp" "/home/gustavobiz/aaa5 semestre/T3-Concordo/build/CMakeFiles/concordo.dir/src/canal.cpp.o"
+  "/home/gustavobiz/aaa5 semestre/T3-Concordo/src/canalTexto.cpp" "/home/gustavobiz/aaa5 semestre/T3-Concordo/build/CMakeFiles/concordo.dir/src/canalTexto.cpp.o"
+  "/home/gustavobiz/aaa5 semestre/T3-Concordo/src/canalVoz.cpp" "/home/gustavobiz/aaa5 semestre/T3-Concordo/build/CMakeFiles/concordo.dir/src/canalVoz.cpp.o"
   "/home/gustavobiz/aaa5 semestre/T3-Concordo/src/main.cpp" "/home/gustavobiz/aaa5 semestre/T3-Concordo/build/CMakeFiles/concordo.dir/src/main.cpp.o"
+  "/home/gustavobiz/aaa5 semestre/T3-Concordo/src/mensagem.cpp" "/home/gustavobiz/aaa5 semestre/T3-Concordo/build/CMakeFiles/concordo.dir/src/mensagem.cpp.o"
   "/home/gustavobiz/aaa5 semestre/T3-Concordo/src/servidor.cpp" "/home/gustavobiz/aaa5 semestre/T3-Concordo/build/CMakeFiles/concordo.dir/src/servidor.cpp.o"
   "/home/gustavobiz/aaa5 semestre/T3-Concordo/src/sistema.cpp" "/home/gustavobiz/aaa5 semestre/T3-Concordo/build/CMakeFiles/concordo.dir/src/sistema.cpp.o"
   "/home/gustavobiz/aaa5 semestre/T3-Concordo/src/usuario.cpp" "/home/gustavobiz/aaa5 semestre/T3-Concordo/build/CMakeFiles/concordo.dir/src/usuario.cpp.o"

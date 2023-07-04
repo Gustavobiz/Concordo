@@ -55,6 +55,12 @@ leave-server
 leave-server
 enter-server anafest
 list-participants
+create-channel casa-de-mae-joana texto
+create-channel casa-de-mae-joana2 voz
+create-channel casa-de-mae-joana2 voz
+create-channel casa-de-mae-joana texto
+create-channel casa-de-mae-joana text
+list-channels
 quit
 
 

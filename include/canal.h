@@ -1,11 +1,17 @@
 #ifndef canal_h
 #define canal_h
 #include <string>
+#include "mensagem.h"
+
+
 using namespace std;
 class Canal{
-    private:
-    string nome;
+    protected:
+        string nome;
     public:
+         Canal(const std::string& nome);
+         virtual string getNome();
+         virtual ~Canal();
 };
 
 

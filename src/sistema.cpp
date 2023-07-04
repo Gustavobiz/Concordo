@@ -30,6 +30,14 @@ int Sistema::comandos(string& comando){
             return 11;
         }else if (comando.find("list-participants") == 0 && Idlogado>0) {
             return 12;
+        }else if (comando.find("list-channels") == 0 && Idlogado>0) {
+            return 13;
+        }else if (comando.find("create-channel") == 0 && Idlogado>0) {
+            return 14;
+        }else if (comando.find("enter-channel") == 0 && Idlogado>0) {
+            return 15;
+        }else if (comando.find("leave-channel") == 0 && Idlogado>0) {
+            return 16;
         }
 
         
@@ -218,42 +226,69 @@ void Sistema::listarPessoasServer() {
     }   
 }
 Sistema::~Sistema(){}
-// Servidor getServer(string& nomeServer){
-//     // for ( Servidor server : todosSer) {
-//     //     if (server.getNomeSer() == nomeServer) { 
-//     //         return server;
-//     //     }
-//     // }
-//     return;
-// }
+void Sistema::listarCanais() {
+    if (serAtual == "nenhum") {
+        cout << "Você parece não estar online" << endl;
+        return;
+    }
 
+    for (Servidor& servidor : todosSer) {
+        if (servidor.getNomeSer() == serAtual) {
+            cout << "#Canais de Texto:" << endl;
+            for (Canal* canal : servidor.getCanais()) {
+                if (canal != nullptr && dynamic_cast<CanalTexto*>(canal) != nullptr) {
+                    cout << canal->getNome() << endl;
+                }
+            }
 
-// void Sistema::listarPessoasServer() {
-//    if (serAtual == "nenhum") {
-//         cout << "Você não está conectado a um servidor." << endl;
-//         return;
-//     }
+            cout << "#Canais de Voz:" << endl;
+            for (Canal* canal : servidor.getCanais()) {
+                if (canal != nullptr && dynamic_cast<CanalVoz*>(canal) != nullptr) {
+                    cout << canal->getNome() << endl;
+                }
+            }
+        }
+    }
+}
 
-//     // Obtém o vetor de IDs dos usuários no servidor atual
-//     vector<int> usuariosNoServidor;
-//     for (Servidor& servidor : todosSer) {
-//         if (servidor.getNomeSer() == serAtual) {
-//             usuariosNoServidor = servidor.getUsuariosNoServidor();
-//             break;
+// void Sistema::listarCanais() {
+//     if(serAtual=="nenhum"){
+//         cout<<"Você parece não estar online"<<endl;
+//            return ;
+//     }    
+//         for (Servidor& servidor : todosSer) {
+//             if (servidor.getNomeSer() == serAtual) {
+//                 cout << "#Canais de Texto:" << endl;
+//                 for (Canal* canal : servidor.getCanais()) {
+//                     if (dynamic_cast<CanalTexto*>(canal) != nullptr) {
+//                           cout << canal->getNome() << endl;
 //         }
 //     }
 
-//     // Exibe os nomes dos usuários
-//     cout << "Usuários no servidor '" << serAtual << "':" << endl;
-//     for (int idUsuario : usuariosNoServidor) {
-//         for (Usuario& usuario : todosUsu) {
-//             if (usuario.getId() == idUsuario) {
-//                 cout << usuario.getNome() << endl;
-//                 break;
-//             }
+//              cout << "#Canais de Voz:" << endl;
+//                   for (Canal* canal : servidor.getCanais()) {
+//                       if (dynamic_cast<CanalVoz*>(canal) != nullptr) {
+//                           cout << canal->getNome() << endl;
 //         }
-//     } 
+//     }                
+//         }
+//         }
+
 // }
 
+string Sistema::criarCanal(std::string& nomeCanal, std::string& tipo){
+    if(serAtual=="nenhum"){
+           return "Você parece não estar online";
+    }else{
+    for (Servidor& servidor : todosSer) {
+        if (servidor.getNomeSer() == serAtual) {
+            return servidor.addCanais(nomeCanal, tipo);
+        }
+        }        
+    }    
+
+        return "erros2";
+
+}
 
 
