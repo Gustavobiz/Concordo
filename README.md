@@ -38,7 +38,7 @@ A2.9 - Listar pessoas no servidor: comando list-participants
 # Teste dos comandos 
 
 # A1.2 Sair do sistema :
-Execução do comando no fim do teste:
+Execução do comando no fim do teste, terminando mesmo com mais comandos:
 quit
 
 Saída:
@@ -235,4 +235,106 @@ Saindo do servidor 'anafest'
 Você não está visualizando nenhum servidor
 
 # A2.9 - Listar pessoas no servidor :
- não consegui fazer funcionar
+**Resolvi o problema, que estava no entrarServer e a função funcionou
+
+list-participants
+
+Saída:
+
+João Silva
+Pedro Santos
+Carlos Ferreira
+
+ # Comandos
+
+B1.1 - Listar canais do servidor : comando list-channels
+B1.2 - Criar um canal no servidor : comando create-channel <nome> <tipo>
+B1.3 - Entrar em um canal do servidor: comando enter-channel <nome>
+B1.4 - Sair do canal : comando leave-channel
+
+# Limitações do programa
+
+Não fiz o listar e mensagens e ainda não fiz os destructos de forma completa então tem vazamento de mémoria.
+
+# B1.1 - Listar canais do servidor :
+primeiro testet sem tem canais, segundo com.
+teste1
+list-channels
+
+Saída:
+
+#Canais de Texto:
+#Canais de Voz:
+
+teste2
+list-channels
+
+Saída: 
+
+#Canais de Texto:
+casa-de-mae-joana
+#Canais de Voz:
+casa-de-mae-joana2
+# B1.2 - Criar um canal no servidor :
+teste com com voz e texto, depois teste com nomes repetidos.
+
+create-channel casa-de-mae-joana texto
+create-channel casa-de-mae-joana2 voz
+create-channel casa-de-mae-joana2 voz
+create-channel casa-de-mae-joana texto
+create-channel casa-de-mae-joana text
+
+Saída: 
+
+Canal de texto 'casa-de-mae-joana'  criado
+Canal de voz'casa-de-mae-joana2'  criado
+Canal de voz 'casa-de-mae-joana2' já existe!
+Canal de texto 'casa-de-mae-joana' já existe!
+
+# B1.3 - Entrar em um canal do servidor:
+teste com um existente e outro falso
+
+enter-channel casa-de-mae-joana
+enter-channel fsdasfda
+
+Saída: 
+
+Entrou no canal 'casa-de-mae-joana
+Canal 'fsdasfda' não existe
+
+# B1.4 - Sair do canal :
+Sai do canal e depois tenta sair do canal sem estar em um.
+
+leave-channel
+leave-channel
+
+Saída: 
+
+Saindo do canal 
+Você não está visualizando nenhum canal
+
+# B2.1 - Enviar mensagem para o canal :
+tentando enviar sem estar no canal e depoi estando no canal.
+
+send-message Oi pessoal alguém pode me ajudar?
+enter-channel casa-de-mae-joana
+send-message Oi pessoal alguém pode me ajudar?
+send-message teste 2?
+send-message teste 4555?
+
+Saída: 
+
+Você não está visualizando nenhum canal
+Entrou no canal 'casa-de-mae-joana
+enviada
+enviada
+enviada
+
+# B2.2 - Visualizar mensagens do canal :
+list-messages
+
+Saída: 
+
+Carlos Ferreira<5/7/2023 - 17:51>: Oi pessoal alguém pode me ajudar?
+Carlos Ferreira<5/7/2023 - 17:51>: teste 2?
+Carlos Ferreira<5/7/2023 - 17:51>: teste 4555?

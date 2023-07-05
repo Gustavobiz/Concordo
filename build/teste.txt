@@ -55,6 +55,7 @@ leave-server
 leave-server
 enter-server anafest
 list-participants
+list-channels
 create-channel casa-de-mae-joana texto
 create-channel casa-de-mae-joana2 voz
 create-channel casa-de-mae-joana2 voz
@@ -65,6 +66,12 @@ enter-channel casa-de-mae-joana
 enter-channel fsdasfda
 leave-channel
 leave-channel
+send-message Oi pessoal alguém pode me ajudar?
+enter-channel casa-de-mae-joana
+send-message Oi pessoal alguém pode me ajudar?
+send-message teste 2?
+send-message teste 4555?
+list-messages
 quit
-
+send-message Oi 
 

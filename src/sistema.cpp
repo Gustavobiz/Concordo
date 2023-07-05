@@ -38,6 +38,10 @@ int Sistema::comandos(string& comando){
             return 15;
         }else if (comando.find("leave-channel") == 0 && Idlogado>0) {
             return 16;
+        }else if (comando.find("send-message") == 0 && Idlogado>0) {
+            return 17;
+        }else if (comando.find("list-messages") == 0 && Idlogado>0) {
+            return 18;
         }
 
         
@@ -321,5 +325,35 @@ string Sistema::sairCanal(){
     }
 
 }
+string Sistema::enviarMensagem(string mensagem){
+    if(canalAtual=="nenhum"){
+        return "Você não está visualizando nenhum canal";
+    }else{
+    for (Servidor& servidor : todosSer) {
+        if (servidor.getNomeSer() == serAtual) {
+            for (Usuario& usuario : todosUsu) {
+                    if(usuario.getId() == Idlogado){
+                        servidor.setMensagem(mensagem,usuario.getId(),canalAtual);
+                        return "enviada";
 
+                }
+        }
+        }        
 
+    }    
+}
+return "erro enviar mensagem";
+}
+
+void Sistema::listarMensagem(){
+    if(canalAtual=="nenhum"){
+        cout<<"Você não está visualizando nenhum canal"<<endl;
+    }else{    
+    for (Servidor& servidor : todosSer) {
+        if (servidor.getNomeSer() == serAtual) {
+            servidor.exibirMensagens(canalAtual,todosUsu);        
+        }        
+
+    }  
+    }  
+}

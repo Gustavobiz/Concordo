@@ -8,6 +8,11 @@ class Mensagem{
      int enviadoPor;
      string conteudo;
      public:
+     Mensagem(const string& dataHora ,int enviadoPor ,const string& conteudo);
+     string getDataHora();
+     int getId();
+      string getConteudo();
+  
 
 };
 

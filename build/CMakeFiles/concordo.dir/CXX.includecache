@@ -27,6 +27,8 @@ vector
 -
 canal.h
 ../include/canal.h
+mensagem.h
+../include/mensagem.h
 
 ../include/mensagem.h
 string
@@ -39,12 +41,18 @@ vector
 -
 canal.h
 ../include/canal.h
+usuario.h
+../include/usuario.h
 iostream
 -
 canalVoz.h
 ../include/canalVoz.h
 canalTexto.h
 ../include/canalTexto.h
+ctime
+-
+sstream
+-
 
 ../include/sistema.h
 string
@@ -59,12 +67,36 @@ canalTexto.h
 ../include/canalTexto.h
 canalVoz.h
 ../include/canalVoz.h
+mensagem.h
+../include/mensagem.h
 iostream
 -
 
 ../include/usuario.h
 string
 -
+
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/canalTexto.cpp
+canalTexto.h
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/canalTexto.h
+
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/canalVoz.cpp
+canalVoz.h
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/canalVoz.h
+
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/main.cpp
+iostream
+-
+sstream
+-
+string
+-
+sistema.h
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/sistema.h
+
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/servidor.cpp
+servidor.h
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/servidor.h
 
 /home/gustavobiz/aaa5 semestre/T3-Concordo/src/sistema.cpp
 string

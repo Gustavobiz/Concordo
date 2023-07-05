@@ -32,6 +32,7 @@ CMakeFiles/concordo.dir/src/servidor.cpp.o: ../include/canalTexto.h
 CMakeFiles/concordo.dir/src/servidor.cpp.o: ../include/canalVoz.h
 CMakeFiles/concordo.dir/src/servidor.cpp.o: ../include/mensagem.h
 CMakeFiles/concordo.dir/src/servidor.cpp.o: ../include/servidor.h
+CMakeFiles/concordo.dir/src/servidor.cpp.o: ../include/usuario.h
 CMakeFiles/concordo.dir/src/servidor.cpp.o: ../src/servidor.cpp
 
 CMakeFiles/concordo.dir/src/sistema.cpp.o: ../include/canal.h

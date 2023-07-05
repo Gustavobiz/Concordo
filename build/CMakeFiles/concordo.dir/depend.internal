@@ -33,6 +33,7 @@ CMakeFiles/concordo.dir/src/servidor.cpp.o
  ../include/canalVoz.h
  ../include/mensagem.h
  ../include/servidor.h
+ ../include/usuario.h
  /home/gustavobiz/aaa5 semestre/T3-Concordo/src/servidor.cpp
 CMakeFiles/concordo.dir/src/sistema.cpp.o
  ../include/canal.h

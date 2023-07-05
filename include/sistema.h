@@ -6,6 +6,7 @@
 #include "servidor.h"
 #include "canalTexto.h"
 #include "canalVoz.h"
+#include "mensagem.h"
 #include <iostream>
 using namespace std;
 class Sistema{
@@ -107,13 +108,36 @@ class Sistema{
  * @brief Lista as pessoas presentes no servidor atual.
  */   
     void listarPessoasServer();
-
+/**
+ * @brief Lista os canais disponíveis no servidor atual.
+ */
     void listarCanais();
-
+/**
+ * @brief Cria um novo canal no servidor atual.
+ * @param nomeCanal O nome do canal a ser criado.
+ * @param tipo O tipo do canal a ser criado (texto ou voz).
+ * @return Uma mensagem indicando o resultado da operação.
+ */
     string criarCanal(std::string& nomeCanal, std::string& tipo);
-
+/**
+ * @brief Entra em um canal específico do servidor atual.
+ * @param nomeCanal O nome do canal que se deseja entrar.
+ * @return Uma mensagem indicando se a entrada no canal foi bem-sucedida ou se ocorreu algum erro.
+ */
     string entrarCanal(std::string& nomeCanal);
-
+/**
+ * @brief Sai do canal atual.
+ * @return Uma mensagem indicando se a saída do canal foi bem-sucedida ou se ocorreu algum erro.
+ */
     string sairCanal();
+/**
+ * @brief Envia uma mensagem para o canal atual.
+ * 
+ * @param mensagem A mensagem a ser enviada.
+ * @return Uma string indicando o resultado do envio da mensagem.
+ */    
+    string enviarMensagem(string mensagem);
+
+    void listarMensagem();
 };
 #endif 

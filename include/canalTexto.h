@@ -10,6 +10,9 @@ class CanalTexto: public Canal{
     std::vector<Mensagem> mensagens;
     public:
     CanalTexto(string& nome); 
+    ~CanalTexto(); 
+    vector<Mensagem> getMensagens();
+    void setMensagens(Mensagem& mensagem);
 
 };
 #endif 

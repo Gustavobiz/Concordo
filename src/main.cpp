@@ -71,6 +71,12 @@ int main() {
              cout << concordo.entrarCanal(nome)<<endl;
         }else if(op==16){
              cout << concordo.sairCanal()<<endl;
+        }else if(op==17){
+             getline(iss, nome);
+             nome = nome.substr(nome.find_first_not_of(" "));          
+             cout << concordo.enviarMensagem(nome)<<endl;
+        }else if(op==18){       
+             concordo.listarMensagem();
         }
         
         else if(op==40){
