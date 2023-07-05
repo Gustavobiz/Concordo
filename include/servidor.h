@@ -74,7 +74,7 @@ class Servidor{
  * @return Um vetor contendo os IDs dos participantes do servidor.
  */   
     vector<int>&  getIdPart();
-    vector<Canal*> getCanais();
+    vector<Canal*>& getCanais();
     string addCanais(string nomeCanal, string tipo);
 };
 

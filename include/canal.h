@@ -10,7 +10,7 @@ class Canal{
         string nome;
     public:
          Canal(const std::string& nome);
-         virtual string getNome();
+         virtual string getNomeC();
          virtual ~Canal();
 };
 

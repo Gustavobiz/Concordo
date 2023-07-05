@@ -237,14 +237,14 @@ void Sistema::listarCanais() {
             cout << "#Canais de Texto:" << endl;
             for (Canal* canal : servidor.getCanais()) {
                 if (canal != nullptr && dynamic_cast<CanalTexto*>(canal) != nullptr) {
-                    cout << canal->getNome() << endl;
+                    cout << canal->getNomeC() << endl;
                 }
             }
 
             cout << "#Canais de Voz:" << endl;
             for (Canal* canal : servidor.getCanais()) {
                 if (canal != nullptr && dynamic_cast<CanalVoz*>(canal) != nullptr) {
-                    cout << canal->getNome() << endl;
+                    cout << canal->getNomeC() << endl;
                 }
             }
         }

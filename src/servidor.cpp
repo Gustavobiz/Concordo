@@ -28,39 +28,39 @@ vector<int>&  Servidor::getIdPart() {
 }
 Servidor::~Servidor(){}
 
-vector<Canal*> Servidor::getCanais(){
+vector<Canal*>& Servidor::getCanais(){
   return canais;
 
 }
 string Servidor::addCanais(string nomeCanal, string tipo) {
-     CanalTexto newCanalT(nomeCanal);
-     CanalVoz newCanalV(nomeCanal);     
+     Canal* novoCanal = nullptr;
   if(tipo=="texto"){
       for (Canal* canal : canais) {
           if (CanalTexto* canalTexto = dynamic_cast<CanalTexto*>(canal)) {
-            if(canal->getNome()==nomeCanal){
+            if(canal->getNomeC()==nomeCanal){
             string resultado="Canal de texto '"+nomeCanal+"' já existe!";          
             return resultado; 
             }
 
     }
     }
-    canais.push_back(&newCanalT);
+    novoCanal = new CanalTexto(nome);
+    canais.push_back(novoCanal);
     string resultado="Canal de texto '"+nomeCanal+"'  criado";          
     return resultado;    
 
   }else if(tipo=="voz"){
       for (Canal* canal : canais) {
           if (CanalVoz* canalVoz= dynamic_cast<CanalVoz*>(canal)) {
-            if(canal->getNome()==nomeCanal){
+            if(canal->getNomeC()==nomeCanal){
             string resultado="Canal de voz '"+nomeCanal+"' já existe!";          
             return resultado;               
 
             }
     }
     }
-
-    canais.push_back(&newCanalV);
+    novoCanal = new CanalVoz(nome);
+    canais.push_back(novoCanal);
     string resultado="Canal de voz'"+nomeCanal+"'  criado";          
     return resultado;  
 
