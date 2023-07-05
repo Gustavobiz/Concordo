@@ -41,10 +41,9 @@ string Servidor::addCanais(string nomeCanal, string tipo) {
             string resultado="Canal de texto '"+nomeCanal+"' já existe!";          
             return resultado; 
             }
-
     }
     }
-    novoCanal = new CanalTexto(nome);
+    novoCanal = new CanalTexto(nomeCanal);
     canais.push_back(novoCanal);
     string resultado="Canal de texto '"+nomeCanal+"'  criado";          
     return resultado;    
@@ -59,7 +58,7 @@ string Servidor::addCanais(string nomeCanal, string tipo) {
             }
     }
     }
-    novoCanal = new CanalVoz(nome);
+    novoCanal = new CanalVoz(nomeCanal);
     canais.push_back(novoCanal);
     string resultado="Canal de voz'"+nomeCanal+"'  criado";          
     return resultado;  
@@ -67,4 +66,16 @@ string Servidor::addCanais(string nomeCanal, string tipo) {
   }
       return "Esse tipo não existe";
 
+}
+string Servidor::logarCanal(string nomeCanal){
+      for (Canal* canal : canais) {
+          if (CanalTexto* canalTexto= dynamic_cast<CanalTexto*>(canal)) {
+            if(canal->getNomeC()==nomeCanal){
+            string resultado="Entrou no canal '"+nomeCanal;          
+            return resultado;               
+            }
+    }
+    }
+    string resultado="Canal '"+nomeCanal+"' não existe"; 
+    return resultado;
 }

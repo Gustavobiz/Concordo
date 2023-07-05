@@ -76,6 +76,10 @@ class Servidor{
     vector<int>&  getIdPart();
     vector<Canal*>& getCanais();
     string addCanais(string nomeCanal, string tipo);
+    string logarCanal(string nomeCanal);
+
+
+
 };
 
 #endif 

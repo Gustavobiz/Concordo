@@ -61,6 +61,10 @@ create-channel casa-de-mae-joana2 voz
 create-channel casa-de-mae-joana texto
 create-channel casa-de-mae-joana text
 list-channels
+enter-channel casa-de-mae-joana
+enter-channel fsdasfda
+leave-channel
+leave-channel
 quit
 
 

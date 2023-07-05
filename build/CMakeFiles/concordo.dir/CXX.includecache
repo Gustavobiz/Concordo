@@ -46,7 +46,29 @@ canalVoz.h
 canalTexto.h
 ../include/canalTexto.h
 
-/home/gustavobiz/aaa5 semestre/T3-Concordo/src/servidor.cpp
+../include/sistema.h
+string
+-
+vector
+-
+usuario.h
+../include/usuario.h
 servidor.h
-/home/gustavobiz/aaa5 semestre/T3-Concordo/src/servidor.h
+../include/servidor.h
+canalTexto.h
+../include/canalTexto.h
+canalVoz.h
+../include/canalVoz.h
+iostream
+-
+
+../include/usuario.h
+string
+-
+
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/sistema.cpp
+string
+-
+sistema.h
+/home/gustavobiz/aaa5 semestre/T3-Concordo/src/sistema.h
 

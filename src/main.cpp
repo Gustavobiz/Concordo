@@ -66,6 +66,11 @@ int main() {
         }else if(op==14){
              iss >> nome >>generico;
              cout << concordo.criarCanal(nome,generico)<<endl;
+        }else if(op==15){
+             iss >> nome;
+             cout << concordo.entrarCanal(nome)<<endl;
+        }else if(op==16){
+             cout << concordo.sairCanal()<<endl;
         }
         
         else if(op==40){

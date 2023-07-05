@@ -14,7 +14,7 @@ class Sistema{
     std::vector<Servidor> todosSer;
     int Idlogado;
     string serAtual="nenhum";
-
+    string canalAtual="nenhum";
     public:
 /**
  * @brief Construtor da classe Sistema.
@@ -111,5 +111,9 @@ class Sistema{
     void listarCanais();
 
     string criarCanal(std::string& nomeCanal, std::string& tipo);
+
+    string entrarCanal(std::string& nomeCanal);
+
+    string sairCanal();
 };
 #endif 

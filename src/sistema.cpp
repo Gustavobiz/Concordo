@@ -227,6 +227,7 @@ void Sistema::listarPessoasServer() {
 }
 Sistema::~Sistema(){}
 void Sistema::listarCanais() {
+
     if (serAtual == "nenhum") {
         cout << "Você parece não estar online" << endl;
         return;
@@ -278,7 +279,7 @@ void Sistema::listarCanais() {
 
 string Sistema::criarCanal(std::string& nomeCanal, std::string& tipo){
     if(serAtual=="nenhum"){
-           return "Você parece não estar online";
+           return "Você parece não estar online em um server";
     }else{
     for (Servidor& servidor : todosSer) {
         if (servidor.getNomeSer() == serAtual) {
@@ -288,6 +289,36 @@ string Sistema::criarCanal(std::string& nomeCanal, std::string& tipo){
     }    
 
         return "erros2";
+
+}
+
+string Sistema::entrarCanal(std::string& nomeCanal){
+    if(serAtual=="nenhum"){
+           return "Você parece não estar online em um server";
+    }else{
+    string resultado="Entrou no canal '"+nomeCanal;
+    for (Servidor& servidor : todosSer) {
+        if (servidor.getNomeSer() == serAtual) {
+            if(servidor.logarCanal(nomeCanal)==resultado){
+                 canalAtual=nomeCanal;
+                 return servidor.logarCanal(nomeCanal); 
+            }else{
+                return servidor.logarCanal(nomeCanal); 
+            }
+        }
+        }
+               
+    } 
+    return "erros2";
+}
+string Sistema::sairCanal(){
+    if(canalAtual=="nenhum"){
+        return "Você não está visualizando nenhum canal";
+    }else{
+        canalAtual="nenhum";
+        return "Saindo do canal ";  
+
+    }
 
 }
 
