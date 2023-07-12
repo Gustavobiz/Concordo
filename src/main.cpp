@@ -30,34 +30,42 @@ int main() {
              getline(iss, nome);
              nome = nome.substr(nome.find_first_not_of(" "));  
              cout<<concordo.criarUsuario( nome, email,senha, id )<<endl;
+             concordo.salvar();
              
         }else if(op==3){
              iss >> email >>senha;
              cout<<concordo.login(email,senha)<<endl;
+             concordo.salvar();
 
         }else if(op==4){
              cout<<concordo.desconectar()<<endl;
-
+              concordo.salvar();
         }else if(op==5){
             iss >> nome;
              cout<<concordo.criarServer(nome)<<endl;
+             concordo.salvar();
         }else if(op==6){
             iss >> nome;
             getline(iss, generico);
              cout<<concordo.descricao(nome,generico)<<endl;
+             concordo.salvar();
         }else if(op==7){
             iss >> nome >>generico;
              cout<<concordo.definindoConvite(nome,generico)<<endl;
+             concordo.salvar();
         }else if(op==8){
              concordo.listarServer();
         }else if(op==9){
              iss >> nome;
              cout << concordo.removerServer(nome)<<endl;
+             concordo.salvar();
         }else if(op==10){
              iss >> nome>>generico;
              cout << concordo.entrarServer(nome,generico)<<endl;
+             concordo.salvar();
         }else if(op==11){
              cout << concordo.sairServer()<<endl;
+             concordo.salvar();
         }else if(op==12){
              concordo.listarPessoasServer();
         
@@ -66,19 +74,22 @@ int main() {
         }else if(op==14){
              iss >> nome >>generico;
              cout << concordo.criarCanal(nome,generico)<<endl;
+              concordo.salvar();
         }else if(op==15){
              iss >> nome;
              cout << concordo.entrarCanal(nome)<<endl;
+             concordo.salvar();
         }else if(op==16){
              cout << concordo.sairCanal()<<endl;
+             concordo.salvar();
         }else if(op==17){
              getline(iss, nome);
              nome = nome.substr(nome.find_first_not_of(" "));          
              cout << concordo.enviarMensagem(nome)<<endl;
+             concordo.salvar();
         }else if(op==18){       
              concordo.listarMensagem();
         }
-        
         else if(op==40){
             std::cout<<"Código inexistente ou você não tem permissão para realizar comando"<<endl;
 

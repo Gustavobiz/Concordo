@@ -9,7 +9,7 @@
 #include "canalTexto.h"
 #include <ctime>
 #include <sstream>
-
+#include <fstream>
 using namespace std;
 class Servidor{
     private:
@@ -34,19 +34,19 @@ class Servidor{
  *
  * @return O nome do servidor.
  */   
-    string getNomeSer();
+    string getNomeSer()const;
 /**
  * @brief Obtém o ID do dono do servidor.
  *
  * @return O ID do dono do servidor.
  */    
-    int getIdDono();
+    int getIdDono()const;
 /**
  * @brief Obtém a descrição do servidor.
  *
  * @return A descrição do servidor.
  */    
-    string getDescricao();
+    string getDescricao()const;
  /**
  * @brief Define a descrição do servidor.
  *
@@ -64,7 +64,7 @@ class Servidor{
  *
  * @return O código de convite do servidor.
  */   
-    string getCodigoConvite();    
+    string getCodigoConvite()const;    
  /**
  * @brief Adiciona um ID de participante ao servidor.
  *
@@ -77,13 +77,13 @@ class Servidor{
  *
  * @return Um vetor contendo os IDs dos participantes do servidor.
  */   
-    vector<int>&  getIdPart();
+    vector<int>  getIdPart()const;
     /**
  * @brief Retorna uma referência para o vetor de ponteiros para os canais do servidor.
  * 
  * @return Uma referência para o vetor de ponteiros para os canais do servidor.
  */
-    vector<Canal*>& getCanais();
+    vector<Canal*> getCanais()const;
  /**
  * Adiciona um canal ao servidor.
  * @param nomeCanal O nome do canal a ser adicionado.
@@ -104,9 +104,14 @@ class Servidor{
  * @return A mensagem formatada.
  */    
     void setMensagem(string mensagem,int idUsu,string nomeCanal);
-
+/**
+ * @brief Exibe as mensagens de um canal específico em um servidor.
+ * 
+ * @param nomeCanal O nome do canal a ser exibido.
+ * @param todosUsu A lista de usuários do servidor.
+ */
     void exibirMensagens(string nomeCanal,vector<Usuario>& todosUsu);
-
+  
 
 };
 

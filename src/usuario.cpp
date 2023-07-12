@@ -9,16 +9,16 @@ Usuario::~Usuario(){}
   id=Id;
 }*/
 
-string Usuario::getNome() {
+string Usuario::getNome()const {
   return nome;
 }
 
-string Usuario::getEmail() {
+string Usuario::getEmail()const {
   return email;
 }
-string Usuario::getSenha() {
+string Usuario::getSenha()const {
   return senha;
 }
-int Usuario::getId() {
+int Usuario::getId()const {
   return id;
 }

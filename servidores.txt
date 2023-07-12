@@ -1,0 +1,36 @@
+1
+1
+IMD
+ “Descrição do servidor do IMD”
+Eu-odeio-FMC2
+2
+1
+2
+4
+FMC2
+voz
+1
+LP1
+texto
+3
+1
+<11/7/2023 - 22:26>: 
+Galera vcs já teminaram o trabalho?
+1
+<11/7/2023 - 22:26>: 
+Estou quase terminando só tenho algumas duvidas.
+2
+<11/7/2023 - 22:26>: 
+Eai João, fale quais são suas dúvidas.
+EDB2
+texto
+2
+1
+<11/7/2023 - 22:26>: 
+Oi pessoal alguém pode me ajudar?
+1
+<11/7/2023 - 22:26>: 
+quero gritar aaaaaaaaa
+calculo
+voz
+0

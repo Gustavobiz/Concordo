@@ -8,6 +8,7 @@
 #include "canalVoz.h"
 #include "mensagem.h"
 #include <iostream>
+#include <fstream>
 using namespace std;
 class Sistema{
     private:
@@ -16,6 +17,16 @@ class Sistema{
     int Idlogado;
     string serAtual="nenhum";
     string canalAtual="nenhum";
+ /**
+  * @brief Salva os usuarios.
+  *
+  */    
+    void salvarUsuarios();
+ /**
+  * @brief Salva os Servidores.
+  *
+  */     
+    void salvarServidores();
     public:
 /**
  * @brief Construtor da classe Sistema.
@@ -137,7 +148,21 @@ class Sistema{
  * @return Uma string indicando o resultado do envio da mensagem.
  */    
     string enviarMensagem(string mensagem);
-
+/**
+ * @brief Lista as mensagens do canal atual.
+ *
+ * Verifica se há um canal atualmente sendo visualizado e, em caso positivo,
+ * percorre todos os servidores para encontrar o servidor correspondente ao
+ * canal atual e exibir as mensagens desse canal.
+ */
     void listarMensagem();
+/**
+ * @brief Executa as funções privadas que são responsaveis por salvar usuarios e servidores.
+ *
+ */
+    void salvar();
+
+
+
 };
 #endif 

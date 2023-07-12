@@ -1,0 +1,29 @@
+create-user joao@gmail.com senha123 João Silva
+create-user pedro@yahoo.com.br 12345678 Pedro Santos
+create-user ana@outlook.com.br minhaSenha Ana Oliveira
+login joao@gmail.com senha123 João Silva
+create-server IMD
+enter-server IMD
+set-server-desc IMD “Descrição do servidor do IMD”
+set-server-invite-code IMD Eu-odeio-FMC2 
+create-channel FMC2 voz
+enter-channel FMC2
+send-message socorrooooo
+send-message usando o método indutivo!
+create-channel LP1 texto
+enter-channel LP1
+send-message Galera vcs já teminaram o trabalho?
+send-message Estou quase terminando só tenho algumas duvidas.
+create-channel EDB2 texto
+enter-channel EDB2
+send-message Oi pessoal alguém pode me ajudar?
+send-message quero gritar aaaaaaaaa
+create-channel calculo voz
+leave-server
+disconnect
+login pedro@yahoo.com.br 12345678 Pedro Santos
+enter-server IMD Eu-odeio-FMC2
+enter-channel LP1
+send-message Eai João, fale quais são suas dúvidas.
+quit
+

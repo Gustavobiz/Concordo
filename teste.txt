@@ -57,7 +57,7 @@ enter-server anafest
 list-participants
 list-channels
 create-channel casa-de-mae-joana texto
-create-channel casa-de-mae-joana2 voz
+create-channel boladona voz
 create-channel casa-de-mae-joana2 voz
 create-channel casa-de-mae-joana texto
 create-channel casa-de-mae-joana text
@@ -66,11 +66,16 @@ enter-channel casa-de-mae-joana
 enter-channel fsdasfda
 leave-channel
 leave-channel
-send-message Oi pessoal alguém pode me ajudar?
+send-message testet de mensagem?
 enter-channel casa-de-mae-joana
 send-message Oi pessoal alguém pode me ajudar?
 send-message teste 2?
 send-message teste 4555?
+list-messages
+leave-channel
+enter-channel boladona
+send-message mensagem voz 1
+send-message mensagem voz 2
 list-messages
 quit
 send-message Oi 

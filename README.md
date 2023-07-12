@@ -20,7 +20,7 @@ Caso queira executar com os testes desnvolvidos por mim
 
 ./concordo < teste.txt
 
-# Comandos
+ # Parte 1 Comandos
 A1.1 Sair do sistema : comando quit
 A1.2 Criar usuário : comando create-user <email> <senha_sem_espaços> <nome com espaços>
 A1.3 Entrar no sistema : login <email> <senha>
@@ -245,7 +245,7 @@ João Silva
 Pedro Santos
 Carlos Ferreira
 
- # Comandos
+ # Parte 2 Comandos
 
 B1.1 - Listar canais do servidor : comando list-channels
 B1.2 - Criar um canal no servidor : comando create-channel <nome> <tipo>
@@ -254,7 +254,9 @@ B1.4 - Sair do canal : comando leave-channel
 
 # Limitações do programa
 
-Não fiz o listar e mensagens e ainda não fiz os destructos de forma completa então tem vazamento de mémoria.
+Não encontrei nenhum erro e corrigi os erros passados.
+só não consegui fazer com que a data fique bonitinha, ficando assim: 
+<5/7/2023 - 18:12>:
 
 # B1.1 - Listar canais do servidor :
 primeiro testet sem tem canais, segundo com.
@@ -338,3 +340,23 @@ Saída:
 Carlos Ferreira<5/7/2023 - 17:51>: Oi pessoal alguém pode me ajudar?
 Carlos Ferreira<5/7/2023 - 17:51>: teste 2?
 Carlos Ferreira<5/7/2023 - 17:51>: teste 4555?
+ 
+ # Parte 3
+ # Limitações :
+ Só consegui terminar a parte C1 - Implementar Persistência dos dados em disco.
+
+ # Como executar :
+ Vou mandar o arquivo teste,teste2,servidores e usuarios separadamente, eles devem ser movidas pasta build, logo após você seguir os abaixo. 
+
+mkdir build
+cd build
+cmake ..
+make
+
+Caso queira ver sendo executado no teste padrão que usei durante o decorrer 
+
+./concordo < teste.txt
+
+ Caso queira ver o teste especializado/limitado para melhor vizualição das novas implementações  
+
+./concordo < teste2.txt

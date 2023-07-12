@@ -1,13 +1,13 @@
 #include "servidor.h"
 Servidor::Servidor( std::string& nome, int& id): nome(nome), IdDono(id)  {}
 
-string Servidor::getNomeSer() {
+string Servidor::getNomeSer()const {
   return nome;
 }
-string Servidor::getDescricao() {
+string Servidor::getDescricao()const {
   return descricao;
 }
-int Servidor::getIdDono() {
+int Servidor::getIdDono()const {
   return IdDono;
 }
 void Servidor::setDescricao(string& Descricao) {
@@ -16,19 +16,19 @@ void Servidor::setDescricao(string& Descricao) {
 void Servidor::setConvite(string& convite){
 codigoConvite=convite;
 }
-string Servidor::getCodigoConvite(){
+string Servidor::getCodigoConvite()const{
   return codigoConvite;
 }
 void Servidor::addId(int id) {
   idPart.push_back(id);
 }
 
-vector<int>&  Servidor::getIdPart() {  
+vector<int>  Servidor::getIdPart()const{  
     return idPart;
 }
-Servidor::~Servidor(){}
 
-vector<Canal*>& Servidor::getCanais(){
+
+vector<Canal*> Servidor::getCanais()const{
   return canais;
 
 }
@@ -76,6 +76,12 @@ string Servidor::logarCanal(string nomeCanal){
             return resultado;               
             }
     }
+          if (CanalVoz* canalTexto= dynamic_cast<CanalVoz*>(canal)) {
+            if(canal->getNomeC()==nomeCanal){
+            string resultado="Entrou no canal '"+nomeCanal;          
+            return resultado;               
+            }
+    }    
     }
     string resultado="Canal '"+nomeCanal+"' não existe"; 
     return resultado;
@@ -99,6 +105,11 @@ void Servidor::setMensagem(string mensagem,int idUsu,string nomeCanal){
                    canalTexto->setMensagens(send);
             }
             }
+          if (CanalVoz* canalVoz= dynamic_cast<CanalVoz*>(canal)) {
+            if(canal->getNomeC()==nomeCanal){
+                   canalVoz->setMensagensVoz(send);
+            }
+            }            
             }
       
 
@@ -125,7 +136,46 @@ void Servidor::exibirMensagens(string nomeCanal,vector<Usuario>& todosUsu){
               }                  
             }
     }
+          if (CanalVoz* canalVoz= dynamic_cast<CanalVoz*>(canal)) {
+            if(canal->getNomeC()==nomeCanal){
+              Mensagem mensagem =canalVoz->getMensagensVoz();
+                 for ( Usuario usuario : todosUsu) {
+                     if (usuario.getId() == mensagem.getId()) {
+                         cout<<usuario.getNome() <<mensagem.getDataHora() << mensagem.getConteudo()<<endl;
+
+            }
+        }              
+
+            }}    
     }      
 
 
+}
+
+// void Servidor::salvarMensagensTxt(Canal* canal)const{
+//   const Canal* copyCanal=canal;
+//   std::ofstream arquivo("servidores.txt");
+//           if (CanalTexto* canalTexto= dynamic_cast<CanalTexto*>(copyCanal)) {
+//               vector<Mensagem> mensagens = canalTexto->getMensagens();
+//               if(mensagens.size()==0){
+//                 return;
+//               }else{
+//               for (Mensagem mensagem : mensagens) {
+//                    arquivo<<mensagem.getId()<<"\n";
+//                    arquivo<<mensagem.getDataHora() <<"\n";
+//                    arquivo << mensagem.getConteudo()<<"\n";;
+                
+//               }
+//               }                  
+//             }}
+        
+      
+
+
+
+Servidor::~Servidor() {
+    for (Canal* canal : canais) {
+        delete canal;
+    }
+    canais.clear();
 }

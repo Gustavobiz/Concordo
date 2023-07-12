@@ -11,3 +11,4 @@ Mensagem::Mensagem(const std::string& dataHora, int enviadoPor,const std::string
  string Mensagem::getConteudo(){
     return conteudo;
  }
+ Mensagem::~Mensagem(){}

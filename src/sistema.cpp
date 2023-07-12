@@ -108,7 +108,7 @@ string Sistema::criarServer( std::string& nomeServer){
 }
 
 string Sistema::descricao(std::string& nomeServer, std::string& Descricao){
-        for ( Servidor server : todosSer) {
+        for ( Servidor& server : todosSer) {
             if (server.getNomeSer() == nomeServer) {
                 if(server.getIdDono()==Idlogado){
                     server.setDescricao(Descricao);
@@ -299,7 +299,7 @@ string Sistema::criarCanal(std::string& nomeCanal, std::string& tipo){
 string Sistema::entrarCanal(std::string& nomeCanal){
     if(serAtual=="nenhum"){
            return "Você parece não estar online em um server";
-    }else{
+    }else{ 
     string resultado="Entrou no canal '"+nomeCanal;
     for (Servidor& servidor : todosSer) {
         if (servidor.getNomeSer() == serAtual) {
@@ -356,4 +356,83 @@ void Sistema::listarMensagem(){
 
     }  
     }  
+}
+
+
+void Sistema::salvar() {
+    salvarUsuarios();
+    salvarServidores();
+
+}
+void Sistema::salvarUsuarios() {
+    ofstream arquivo("usuarios.txt");
+    arquivo << todosUsu.size() << "\n";
+
+    if (arquivo.is_open()) {
+        // Percorra a lista de usuários e escreva as informações atualizadas no arquivo
+        for (const Usuario& usuario : todosUsu) {
+            arquivo << usuario.getId() << "\n";
+            arquivo << usuario.getNome() << "\n";
+            arquivo << usuario.getEmail() << "\n";
+            arquivo << usuario.getSenha() << "\n";
+        }
+
+        arquivo.close();
+    } else {
+        cout << "Erro ao abrir o arquivo usuarios.txt" << endl;
+    }
+}
+
+void Sistema::salvarServidores() {
+    std::ofstream arquivo("servidores.txt");
+    if (arquivo.is_open()) {
+        // Escrever o total de servidores
+        arquivo << todosSer.size() << "\n";
+        
+        // Escrever os dados de cada servidor no arquivo
+        for (const Servidor& servidor : todosSer) {
+            arquivo << servidor.getIdDono() << "\n";            
+            arquivo << servidor.getNomeSer() << "\n";
+            arquivo << servidor.getDescricao() << "\n";
+
+            arquivo << servidor.getCodigoConvite() << "\n";
+
+            
+            // Escrever os IDs dos participantes do servidor
+            arquivo << servidor.getIdPart().size() << "\n";
+            for (int id : servidor.getIdPart()) {
+                arquivo << id << "\n";
+            }
+            
+            // Escrever os canais do servidor
+            arquivo << servidor.getCanais().size() << "\n";
+            for (const Canal* canal : servidor.getCanais()) {
+                arquivo << canal->getNomeC() << "\n";
+                // Verificar se é um canal de texto
+                if (const CanalTexto* canalTexto = dynamic_cast<const CanalTexto*>(canal)) {
+                    arquivo << "texto" << "\n";
+                    arquivo << canalTexto->getMensagens().size() << "\n";
+                    // servidor.salvarMensagensTxt(canalTexto);
+                    for(Mensagem mensagem:canalTexto->getMensagens()){
+                           arquivo << mensagem.getId() << "\n";
+                           arquivo << mensagem.getDataHora() << "\n";
+                           arquivo << mensagem.getConteudo() << "\n";
+                    }
+
+                }
+                // Verificar se é um canal de voz
+                else if (const CanalVoz* canalVoz = dynamic_cast<const CanalVoz*>(canal)) {
+                    arquivo << "voz" << "\n";
+                    if(canalVoz->getMensagensVoz().getId() == 0){
+                        arquivo <<0<<"\n";
+                    }else{
+                        arquivo <<1<<"\n";
+                    }
+
+                }
+            }
+        }
+        
+        arquivo.close();
+    }
 }

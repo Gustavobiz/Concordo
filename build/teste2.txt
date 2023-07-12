@@ -1,7 +1,0 @@
-create-user joao@gmail.com senha123 João Silva
-create-user joao@gmail.com senha123 João Silva
-create-user maria@hotmail.com segredo456 Maria Souza
-create-user pedro@yahoo.com.br 12345678 Pedro Santos
-create-user julio.melo@imd.ufrn.br 12ab34cd Julio Melo
-create-user ana@outlook.com.br minhaSenha Ana Oliveira
-create-user carlos@uol.com.br 9876Carlos Carlos Ferreira
